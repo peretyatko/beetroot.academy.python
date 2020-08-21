@@ -84,7 +84,7 @@ def delete(book):
 def update():
     num = input('Number to update?\n')
     if num in book['book']:
-        dict.update([book])
+        book.update({'number': num})
     else:
         print("No such number")
 
