@@ -1,4 +1,4 @@
-class Car():
+class Car:
     def __init__(self, brand, model, year, color):
         self.brand = brand
         self.model = model
@@ -16,17 +16,20 @@ class Car():
         return (self.brand + ',' + self.model + ' ' + str(self.year) + ' ' + self.color)
 
     def __str__(self):
-        return self.brand +  ' ' + self.model + ' ' + str(self.year)
+        return self.brand + ' ' + self.model + ' ' + str(self.year)
+
 
 class Truck(Car):
     def __init__(self, brand, model, year, color, trailers):
         super().__init__(brand, model, year, color)
         self.trailers = trailers
+
     def attach_trailer(self, num_of_trailers=1):
         self.trailers += num_of_trailers
 
     def detach_trailer(self, num_of_trailes=1):
         self.trailers -= num_of_trailes
+
 
 my_truck = Truck('MAN', 'TRX', 2012, 'black', 1)
 print(repr(my_truck))
