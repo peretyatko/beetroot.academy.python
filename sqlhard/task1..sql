@@ -28,7 +28,7 @@ FROM jobs
 LEFT JOIN employees ON jobs.job_id = employees.job_id
 GROUP BY job_title;
 
-SELECT city,(employees.first_name ||' ' || employees.last_name) AS full_name, salary
+SELECT city,(employees.first_name || ' ' || employees.last_name) AS full_name, salary
 FROM departments
 LEFT JOIN locations ON locations.location_id = departments.location_id
 LEFT JOIN employees ON departments.department_id = employees.department_id
