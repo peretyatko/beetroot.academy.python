@@ -1,6 +1,7 @@
 CREATE DATABASE workers;
 USE workers;
 
+
 CREATE TABLE workers
 (
 EmployeeID int,
